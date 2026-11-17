@@ -47,10 +47,11 @@ p{margin:0 0 14px;max-width:72ch}
 .links a{font-size:13px;font-weight:500;padding:6px 12px;border-radius:5px;text-decoration:none;background:var(--accent);color:#fff}
 .links a:hover{background:#163e73}
 
-.langs{display:flex;gap:4px;margin-bottom:6px}
-.langs button{font:inherit;font-size:12px;font-weight:600;letter-spacing:.04em;padding:4px 9px;border:1px solid var(--line);border-radius:4px;background:#fff;color:var(--muted);cursor:pointer}
-.langs button:hover{border-color:var(--accent);color:var(--accent)}
-.langs button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.langs{display:flex;gap:6px;margin-bottom:8px}
+.langs button{display:grid;place-items:center;padding:3px;border:2px solid transparent;border-radius:5px;background:transparent;cursor:pointer;opacity:.8;transition:opacity .15s}
+.langs button svg{display:block;width:30px;height:20px;border-radius:2px;box-shadow:0 0 0 1px rgba(26,34,48,.18)}
+.langs button:hover{opacity:1}
+.langs button[aria-pressed="true"]{opacity:1;border-color:var(--accent)}
 /* Barra de secciones */
 .secnav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
 .secnav ol{list-style:none;margin:0 auto;padding:0 28px;max-width:1080px;display:flex;gap:4px;overflow-x:auto}
@@ -159,10 +160,10 @@ footer{font-size:13px;color:var(--muted);padding:24px 0;border-top:1px solid var
     </div>
     <div class="contact">
       <div class="langs" role="group" aria-label="Language">
-        <button type="button" data-lang="en" aria-pressed="true">EN</button>
-        <button type="button" data-lang="es" aria-pressed="false">ES</button>
-        <button type="button" data-lang="it" aria-pressed="false">IT</button>
-        <button type="button" data-lang="gl" aria-pressed="false">GL</button>
+        <button type="button" data-lang="en" aria-pressed="true" aria-label="English" title="English"><svg viewBox="0 0 60 30" aria-hidden="true"><clipPath id="ukc"><path d="M0,0 v30 h60 v-30 z"/></clipPath><clipPath id="ukt"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath><g clip-path="url(#ukc)"><path d="M0,0 v30 h60 v-30 z" fill="#012169"/><path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/><path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#ukt)" stroke="#C8102E" stroke-width="4"/><path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/><path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/></g></svg></button>
+        <button type="button" data-lang="es" aria-pressed="false" aria-label="Español" title="Español"><svg viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#AA151B"/><rect y="0.5" width="3" height="1" fill="#F1BF00"/></svg></button>
+        <button type="button" data-lang="it" aria-pressed="false" aria-label="Italiano" title="Italiano"><svg viewBox="0 0 3 2" aria-hidden="true"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#CE2B37"/></svg></button>
+        <button type="button" data-lang="gl" aria-pressed="false" aria-label="Galego" title="Galego"><svg viewBox="0 0 3 2" aria-hidden="true"><rect width="3" height="2" fill="#fff"/><path d="M0,0 L0.55,0 L3,1.63 L3,2 L2.45,2 L0,0.37 Z" fill="#0099CC"/></svg></button>
       </div>
       <a href="mailto:alessandro.indelicato@uvigo.gal">alessandro.indelicato@uvigo.gal</a>
       <span>Office 419 · Campus universitario<br>36310 Vigo, Spain</span>
